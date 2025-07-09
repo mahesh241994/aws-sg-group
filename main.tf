@@ -1,6 +1,6 @@
 resource "aws_security_group" "allow_tls" {
   name        = local.name
-  description = "Security group for ${var.project_name} in ${var.environment} environment"
+  description = var.sg_description
     vpc_id      = var.vpc_id
 
     dynamic "egress" {

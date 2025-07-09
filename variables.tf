@@ -45,3 +45,10 @@ variable "sg_tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "sg_description" {
+  description = "Description for the security group"
+  type        = string
+  default     = "Security group for ${var.project_name} in ${var.environment} environment"
+  
+}
